@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Sign Up</h1>
+    <form action="" method="post" name="sigup">
+        {{ form.hidden_tag() }}
+        <p>
+            Please enter your username:<br>
+            {{ form.username }}<br>
+            {% for error in form.errors.username %}
+                <span style="color: red;">{{ error }}</span>
+            {% endfor %}
+        </p>
+        <p>
+            Password:<br>
+            {{ form.password0 }}<br>
+            {% for error in form.errors.password0 %}
+                <span style="color: red;">{{ error }}</span>
+            {% endfor %}
+        </p>
+        <p>
+            Password:<br>
+            {{ form.password1 }}<br>
+            {% for error in form.errors.password1 %}
+                <span style="color: red;">{{ error }}</span>
+            {% endfor %}
+        </p>
+        <p><input type="submit" value="Sign up"></p>
+    </form>
+{% endblock %}

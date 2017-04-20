@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Sign in To BILIBILI</h1>
+    <form action="/go" method="post" name="go">
+        {{ form.hidden_tag() }}
+        <p>
+            <img src="img/{{ username }}">
+        </p>
+        <p>
+            Please enter verify code:<br>
+            {{ form.vercode }}<br>
+            {% for error in form.errors.vercode %}
+                <span style="color: red;">{{ error }}</span>
+            {% endfor %}
+        </p>
+        <p><input type="submit" value="Sign in"></p>
+    </form>
+{% endblock %}

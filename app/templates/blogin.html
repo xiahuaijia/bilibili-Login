@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Sign in To BILIBILI</h1>
+    <form action="/blogin" method="post" name="blogin">
+        {{ form.hidden_tag() }}
+        <p>
+            Please enter your username:<br>
+            {{ form.username }}<br>
+            {% for error in form.errors.username %}
+                <span style="color: red;">{{ error }}</span>
+            {% endfor %}
+        </p>
+        <p>
+            Password:<br>
+            {{ form.password }}<br>
+            {% for error in form.errors.password %}
+                <span style="color: red;">{{ error }}</span>
+            {% endfor %}
+        </p>
+        <p><input type="submit" value="Sign in"></p>
+    </form>
+{% endblock %}

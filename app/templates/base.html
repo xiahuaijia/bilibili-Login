@@ -1,0 +1,30 @@
+<html>
+<head>
+    {% if title %}
+        <title>{{ title }} - demo</title>
+    {% else %}
+        <title>demo</title>
+    {% endif %}
+</head>
+<body>
+<div>
+    Demo:
+    <a href="/index">home</a>
+    <a href="/login">login</a>
+    <a href="/sigup">sigup</a>
+    <a href="/logout">logout</a>
+</div>
+<hr>
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+{% block content %}
+{% endblock %}
+</body>
+</html>
