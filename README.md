@@ -14,11 +14,14 @@ ajax.php 接口参数  全部都是Get请求  编码UTF-8
 当然在把视频的算法逆向出来前,ajax.php 暂时不放出来.如果你担心安全问题,你可以自己写一个.
 
 #### 现已提供
+选择分支进行查看
+
 |语言|状态|时间(UTC+8)|备注|
 |---|---|----|----|
 |PHP|![](http://www.acesheep.com/bilibili_Login/status/failing.svg?1492106887)|2017-03-21 17:30:00|暂时未公布
-|JavaScript|![](http://www.acesheep.com/bilibili_Login/status/passing.svg?1492106887)|2017-3-16 20:28:54|
-|C#|![](http://www.acesheep.com/bilibili_Login/status/passing.svg?1492106887)|2017-4-20 15:54:28|
+|JavaScript|![](http://www.acesheep.com/bilibili_Login/status/passing.svg?1492106887)|2017-03-16 20:28:54|AceSheep
+|C#|![](http://www.acesheep.com/bilibili_Login/status/passing.svg?1492106887)|2017-04-20 15:54:28|丶小C 提供
+|Python|![](http://www.acesheep.com/bilibili_Login/status/passing.svg?1492106887)|2017-02-06 12:34:55|[点这里过去](https://github.com/ztcaoll222/bilibili_login)
 
 # 获取验证码captcha:
 
