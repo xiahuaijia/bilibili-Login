@@ -67,19 +67,21 @@ ajax.php 接口参数  全部都是Get请求  编码UTF-8
 返回 文本  每次返回值不一样
 
 例子  http://www.acesheep.com/bilibili_Login/ajax.php?act=getpasswd&ts=dGVzdA==&hash=1dc79af795a0d88b&sign=7bc42fbc33446bd7ca6f03b574bbb4eb
+
 例子返回
+
 ```
 cXb+O1QW5IhqMLYAee1tzLQ6TGq8OabCIFJUeQZKqoN1WoTIPZ+TBQm/zy8/EczroqcS/dlI/s/hX+aTRPmlsUkZGNqxjL8n9Sk9QO6zVEnCwGNZWBGyZaJSkKho0PdHBHpQmuZRIwt1YJ7dVSLAxYpmiIA61Lam6O5SwuLpaBU=
 ```
 提示!!!!!!!!!!!!!
 加密后的密码有效期为20秒  hash有效期为20秒!!!!!
 
-`sign 算法`
+`sign 算法(服务器)`
 ```php
           $appkey = "MjNnRTBSZWI4blkzbDNSZ251Zm8="; // AppKey 用了Base64 加密<br>
           $str ='passwd='.base64_decode($passwd).'&hash='.$hash.'&appkey='.base64_decode($appkey);
 ```
-`说明~    MD5一下("passwd=" + 密码 + "&hash=" + hash值 + "&appkey=" + base64_decode解码的appkey)`
+`说明(客户端)~    MD5一下("passwd=" + 密码 + "&hash=" + hash值 + "&appkey=" + base64_decode解码的appkey)`
 
 
 # 错误代码说明:
